@@ -1,9 +1,8 @@
 credentials.js
 OAuth.js
+
 # node_modules
 credentialsv2.js
-Keys.js
-Sheets.js
 
 # Logs
 logs
