@@ -5,7 +5,7 @@
     // $('#theTable').table2csv();
 // });
 
-($ => {
+(function($) {
 	
 	var options = {
 		/* action='downoad' options */
@@ -22,12 +22,12 @@
 		excludeRows: ''
 	};
 	
-	var quote = text => {
+	function quote(text) {
 		return '"' + text.replace('"', '""') + '"';
 	}
 	
 	// taken from http://stackoverflow.com/questions/3665115/create-a-file-in-memory-for-user-to-download-not-through-server
-	var download = (filename, text) => {
+	function download(filename, text) {
 		var element = document.createElement('a');
 		element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
 		element.setAttribute('download', filename);
@@ -40,16 +40,16 @@
 		document.body.removeChild(element);
 	}
 	
-	var convert = table => {
+	function convert(table) {
 		var output = "";
 			
 		var rows = table.find('tr').not(options.excludeRows);
 		
 		var numCols = rows.first().find("td,th").filter(":visible").not(options.excludeColumns).length;
 		
-		rows.each(() => {
+		rows.each(function() {
 			$(this).find("td,th").filter(":visible").not(options.excludeColumns)
-			.each((i, col) => {
+			.each(function(i, col) {
 				col = $(col);
 				
 				output += options.quoteFields ? quote(col.text()) : col.text();
@@ -64,7 +64,7 @@
 		return output;
 	}
 	
-	$.fn.table2csv = (action, opt) => {
+	$.fn.table2csv = function(action, opt) {
 		if(typeof action === 'object') {
 			opt = action;
 			action = 'download';
@@ -90,4 +90,4 @@
 		return this;
 	}
 	
-}/* (jQuery) */);
+}(jQuery));

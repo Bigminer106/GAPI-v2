@@ -71,8 +71,7 @@ var setup = [{
     className: "metric-5"
   },
 
-  {
-    metric: "metric-6",
+  { metric: "metric-6",
     condition: conditions["bool"],
     operator: operators["op1"],
     target: "bool",

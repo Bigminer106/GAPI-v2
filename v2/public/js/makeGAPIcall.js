@@ -1,5 +1,5 @@
 // Make API call to gSheets:
-var makeApiCall = () => {
+function makeApiCall() {
   $("#instructions")
     .empty()
     .removeClass("instructions");
@@ -13,13 +13,13 @@ var makeApiCall = () => {
 
   const request = gapi.client.sheets.spreadsheets.values.get(params);
 
-  request.then(response => {
+  request.then(function(response) {
     renderTable(response.result.values);
   });
 };
 
 // Set landing page to Legend:
-var landingPage = () => {
+function landingPage() {
   sheet_ID = defaultSheet.sheet_ID;
   sheet_range = defaultSheet.sheet_range;
   makeApiCall();

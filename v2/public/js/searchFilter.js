@@ -1,5 +1,5 @@
 // // Logic to filter using .search-key filters:
-var searchAll = () => {
+function searchAll() {
     let trs, tds;
     const vlu = [];
 
@@ -9,7 +9,7 @@ var searchAll = () => {
 
     // Get each value entered, upon keyUp:
     for (key in searchKey$) {
-        var contents = $('#tableFilter1')[0];
+        var contents = $('#tableFilter'[key]);
         vlu.push(document.getElementById(searchKey$[key]).value); // does not return the values
         const searchVal = $(this).val();
         // const searchVal2 = document.getElementById(searchKeys[d]).value;
@@ -29,7 +29,7 @@ var searchAll = () => {
     console.log(trs);
 
     // // For each table row, let tr = row.
-    trs.forEach((tr, i) => {
+    trs.forEach(function (tr, i) {
 
         let filters = [];
         vlu.forEach((filter, j) =>
@@ -39,7 +39,7 @@ var searchAll = () => {
         // const testhere$ = new Array($('tr td')); // prints classes!
         const testhere$ = Array.from(document.getElementsByTagName('tr td'));
         console.log(testhere$); //
-        testhere$.forEach(i => {
+        testhere$.forEach(function(i) {
 
             // if (testhere$[2] && testhere$[3] && testhere$[4] && testhere$[5] && testhere$[6] && testhere$[7] && testhere$[8] && testhere$[9] && testhere$[10] && testhere$[11] && testhere$[12] && testhere$[13] && testhere$[14] && testhere$[15] && testhere$[16]) {
             if (testhere$) {
