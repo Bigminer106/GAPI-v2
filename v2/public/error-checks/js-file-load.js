@@ -1,4 +1,3 @@
-// var localhost;
 var localhost;
 var fileString;
 
