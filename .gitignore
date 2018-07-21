@@ -1,6 +1,7 @@
 credentials.js
 OAuth.js
-./v2/credentials/
+Keys.js
+Sheets.js
 
 # node_modules
 credentialsv2.js
