@@ -12,9 +12,9 @@ var renderDownloadButton = table => {
     });
 };
 
-// var clearDownloadButton = table => {
-//     $('#downloads').empty();
-// };
+var clearDownloadButton = table => {
+    $('#downloads').empty();
+};
 
 // ERROR CHECK FEATURE: logs file loaded to console
 logFile();
