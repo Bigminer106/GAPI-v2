@@ -1,7 +1,5 @@
 function renderFilters() {
     console.log("render filters included");
-    // Generate filters:
-    // const inputDiv = $('#input-filters');
     const inputDiv = $('#temp-all-filters');
     // const dimensionDiv = $('#dimension-filters');
     // const metricDiv = $('#metric-filters');
@@ -12,8 +10,11 @@ function renderFilters() {
     // const dimensionFilter = $('input.dimension');
     // const formattedFilter = $('input.formatted');
     // const extraMetricFilter = $('input.extrametric');
-    
 
+    $('.sheet-button').on('click', () => {
+        $('#temp-all-filters').empty();
+    });
+    
     $(index).each(function (i) {
         var inputs = $('<input>')
             .attr('type', 'text')
@@ -30,7 +31,6 @@ function renderFilters() {
             //         .appendTo(dimensionDiv)
             // };
         console.log(searchKey$);
-        
     });
     
     
