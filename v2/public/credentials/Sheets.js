@@ -1,5 +1,6 @@
 // INSTRUCTIONS :
 // Retitle to Sheets.js
+// INSTRUCTIONS: Retitle to Sheets.js
 
 var sheet_ID;
 var sheet_range;
@@ -12,9 +13,9 @@ var sheet = [
     sheet_title: 'dummy data'
   }),
   (sheet1 = {
-    sheet_ID: '1KuvUkzMQYD34w3aTYseVkkpc5GoIBV5fyqMwDQWTgf8', // public sheet
-    sheet_range: ['A1:H100'],
-    sheet_title: 'Test Data Bunch'
+    sheet_ID: '1KbuidBzpeH_i6X-1QoXgxcyi2PoldMyiBtqvRX_OuAQ', // public sheet
+    sheet_range: ['A1:ZZ200'],
+    sheet_title: 'Data Bunch 1'
   }),
   (sheet2 = {
     sheet_ID: 'INSERT SHEET ID FROM URL',
