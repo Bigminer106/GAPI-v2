@@ -82,3 +82,5 @@ var setup = [{
 
 // ERROR CHECK FEATURE: logs file loaded to console
 logFile();
+
+module.exports = {settings, setup};

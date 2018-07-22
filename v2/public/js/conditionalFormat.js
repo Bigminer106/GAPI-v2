@@ -1,4 +1,5 @@
-// var formatSettings = require("/conditional-settings");
+var settings = require("settings");
+var setup = require("setup");
 
 // Conditional formatting class setting:
 const formattedMetric = $('.formatted-metric');
@@ -56,16 +57,16 @@ console.log(conditionsBlock);
 conditionAssignment();
 
 
-function currentKPIs (condition, operator, target, value_Params, title) {
-    currentKPIs.condition = currentCondition,
-    currentKPIs.operator = currentOperator,
-    currentKPIs.target = currentTarget,
-    currentKPIs.value_Params = currentValueParams,
-    currentKPIs.title = currentTitle
-};
+// function currentKPIs (condition, operator, target, value_Params, title) {
+//     currentKPIs.condition = currentCondition,
+//     currentKPIs.operator = currentOperator,
+//     currentKPIs.target = currentTarget,
+//     currentKPIs.value_Params = currentValueParams,
+//     currentKPIs.title = currentTitle
+// };
 
-currentKPIs()
-console.log(currentKPIs)
+// currentKPIs()
+// console.log(currentKPIs)
 
 // Sets condition logic:
 // const cellText = this.innerHTML;
