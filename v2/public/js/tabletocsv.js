@@ -2,7 +2,7 @@ var renderDownloadButton = table => {
     clearDownloadButton();
     const downloadButton = $('<button>')
         .addClass('download-button')
-        .appendTo('.navbar')
+        .appendTo('#downloads')
         .attr('id', 'downloadButton')
         // .attr('onclick', $('#theTable').table2csv())
         .text('Download CSV');
