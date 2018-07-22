@@ -1,5 +1,5 @@
-var settings = require("settings");
-var setup = require("setup");
+// var settings = require("settings");
+// var setup = require("setup");
 
 // Conditional formatting class setting:
 const formattedMetric = $('.formatted-metric');
@@ -27,18 +27,19 @@ function formatAssignment() {
         KPI;
         // $(td)
 
-        $('tbody td').each(function (i) {
-            if (($('tbody td').hasClass(classNames[i])) &&
-                (classNames.includes(aht.className))) {
-                KPI = className.parent()
-                console.log(KPI);
-                console.log(className.parent());
-                console.log("KPI: " + KPI);
-            } else {}
-        });
+        // $('tbody td').each(function (i) {
+        //     if (($('tbody td').hasClass(classNames[i])) &&
+        //         (classNames.includes(aht.className))) {
+        //         KPI = className.parent()
+        //         console.log(KPI);
+        //         console.log(className.parent());
+        //         console.log("KPI: " + KPI);
+        //     } else {}
+        // });
     }
 };
 
+// 
 function conditionAssignment() {
     for (i = 0; i < setup.length; i++) {
         KPIs = setup[i];
@@ -49,7 +50,7 @@ function conditionAssignment() {
         KPITitle = KPIs.className;
         console.log(KPIs);
 
-        // KPI.push(KPIs);
+        KPI.push(KPIs);
         // sheet_ID = $(this).data("sheetInfo").id;
     }
 };
@@ -72,28 +73,32 @@ conditionAssignment();
 // const cellText = this.innerHTML;
 
 function testingCondition() {
-  let formattedCell$ = new Array($('.formatted-metric'))
-  console.log('formattedCell$: '+ formattedCell$)
-  console.log(formattedCell$);}; testingCondition();
-    const cellText = $(this).text();
-    console.log("cellText: " + cellText)
-        const noComma = cellText.replace(/\,/g, '');
-            cellNum = parseFloat(noComma);
+    let formattedCell$ = new Array($('.formatted-metric'))
+    console.log('formattedCell$: ' + formattedCell$)
+    console.log(formattedCell$);
+}; testingCondition();
 
-            $('.metric-2')
-        if (cellText + op1[0] + valueParams[0]) {
-        condition = high[0];
+const cellText = $(this).text();
+      console.log("cellText: " + cellText)
+const noComma = cellText.replace(/\,/g, '');
+      cellNum = parseFloat(noComma);
+
+$('.metric-2').each(function (i) {
+if (cellText + op1[0] + valueParams[0]) {
+    condition = high[0];
 } else if (cellText + op1[0] + valueParams[1]) {
-        condition = high[1];
+    condition = high[1];
 } else if (cellText + op1[0] + valueParams[2]) {
-        condition = high[2];
+    condition = high[2];
 } else if (cellText + op1[0] + valueParams[3]) {
-        condition = high[3];
+    condition = high[3];
 } else if (cellText + op1[0] + valueParams[4]) {
-        condition = high[4];
-} else {condition = undefined};
-
-        testingCondition()
+    condition = high[4];
+} else {
+    condition = undefined
+};
+});
+testingCondition()
 
 // ERROR CHECK FEATURE: logs file loaded to console
 logFile();

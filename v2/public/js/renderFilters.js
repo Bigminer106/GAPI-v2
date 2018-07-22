@@ -30,7 +30,7 @@ function renderFilters() {
             //     $('input').addClass('dimension')
             //         .appendTo(dimensionDiv)
             // };
-        console.log(searchKey$);
+        // console.log(searchKey$);
     });
     
     

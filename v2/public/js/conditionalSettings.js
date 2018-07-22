@@ -40,7 +40,7 @@ var setup = [{
     condition: conditions["default"],
     operator: operators["op1"],
     target: "high",
-    valueParams: [9.8, 9.3, 8.8, 7.0],
+    valueParams: [9, 9, 8, 7],
     className: "metric-2"
   },
 
@@ -83,4 +83,4 @@ var setup = [{
 // ERROR CHECK FEATURE: logs file loaded to console
 logFile();
 
-module.exports = {settings, setup};
+// module.exports = {settings, setup};
