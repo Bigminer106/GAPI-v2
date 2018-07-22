@@ -59,6 +59,7 @@ function renderFilters() {
 
 // });
 
+// testingCondition();
 
 // ERROR CHECK FEATURE: logs file loaded to console
 logFile();

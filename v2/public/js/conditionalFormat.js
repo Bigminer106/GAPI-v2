@@ -70,35 +70,42 @@ conditionAssignment();
 // console.log(currentKPIs)
 
 // Sets condition logic:
-// const cellText = this.innerHTML;
 
-function testingCondition() {
-    let formattedCell$ = new Array($('.formatted-metric'))
-    console.log('formattedCell$: ' + formattedCell$)
-    console.log(formattedCell$);
-}; testingCondition();
+// function testingCondition() {
+//     let formattedCell$ = new Array($('.formatted-metric'))
+//     console.log('formattedCell$: ' + formattedCell$)
+//     console.log(formattedCell$);
+// }; testingCondition();
+// function testingCondition() {
+//     let extrametric$ = new Array($('.extrametric'))
+//     console.log('extrametric$: ' + extrametric$)
+//     console.log(extrametric$);
+// };
 
-const cellText = $(this).text();
-      console.log("cellText: " + cellText)
-const noComma = cellText.replace(/\,/g, '');
-      cellNum = parseFloat(noComma);
+//   console.log("cellText: " + cellText)
 
 $('.metric-2').each(function (i) {
-if (cellText + op1[0] + valueParams[0]) {
-    condition = high[0];
-} else if (cellText + op1[0] + valueParams[1]) {
+    var cellText = this.innerHTML;
+    // const cellText = $(this).text();
+    var noComma = cellText.replace(/\,/g, '');
+    var cellNum = parseFloat(noComma);
+    console.log(cellNum + op1[0] + valueParams[0]);
+    if ($(this).hasClass('indextitle')) {
+        $(this).addClass('ignore');
+} else if (cellNum + op1[0] + valueParams[0]) {
+    condition = high[0]
+} else if (cellNum + op1[0] + valueParams[1]) {
     condition = high[1];
-} else if (cellText + op1[0] + valueParams[2]) {
+} else if (cellNum + op1[0] + valueParams[2]) {
     condition = high[2];
-} else if (cellText + op1[0] + valueParams[3]) {
+} else if (cellNum + op1[0] + valueParams[3]) {
     condition = high[3];
-} else if (cellText + op1[0] + valueParams[4]) {
+} else if (cellNum + op1[0] + valueParams[4]) {
     condition = high[4];
 } else {
     condition = undefined
 };
 });
-testingCondition()
 
 // ERROR CHECK FEATURE: logs file loaded to console
 logFile();
