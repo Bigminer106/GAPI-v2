@@ -14,9 +14,9 @@ let KPIs = [];
 // console.log("fcr conditions: " + metric.condition);
 // console.log("kpi conditions: "+KPI.condition); // CANNOT READ
 let conditionsBlock = setup.className + " conditions: " + setup.condition;
-console.log(settings);
+    console.log(settings); // ARRAY
 let setting$ = $(settings);
-console.log(setting$);
+    console.log(setting$); // OBJECT
 
 function formatAssignment() {
     for (i = 0; i < formattedMetric.length; i++) {
@@ -25,17 +25,17 @@ function formatAssignment() {
         const cellText = this.innerHTML;
 
         KPI;
-        // $(td)
+        $(td)
 
-        // $('tbody td').each(function (i) {
-        //     if (($('tbody td').hasClass(classNames[i])) &&
-        //         (classNames.includes(aht.className))) {
-        //         KPI = className.parent()
-        //         console.log(KPI);
-        //         console.log(className.parent());
-        //         console.log("KPI: " + KPI);
-        //     } else {}
-        // });
+        $('tbody td').each(function (i) {
+            if (($('tbody td').hasClass(classNames[i])) &&
+                (classNames.includes(aht.className))) {
+                KPI = className.parent()
+                console.log(KPI);
+                console.log(className.parent());
+                console.log("KPI: " + KPI);
+            } else {}
+        });
     }
 };
 
