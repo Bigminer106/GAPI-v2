@@ -1,7 +1,7 @@
 var renderDownloadButton = table => {
 const downloadDiv = $('<div>')
                 .attr('id', 'downloads')
-                .appendTo('h2')
+                .appendTo('navbar')
                 .css('style', 'none');
     
 clearDownloadButton();
