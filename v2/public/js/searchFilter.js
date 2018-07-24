@@ -125,15 +125,19 @@ function searchAll() {
     let table, trs, tds;
     table = document.getElementById('tableBody');
     trs = Array.from(table.getElementsByTagName('tr'));
-    const input = []
+
+    var input = [];
     console.log(input);
     input2 = $('.filter');
     console.log(input2);
-    input2$ = input2;
+    input2$ = $(input2);
     console.log(input2$);
 
-    for (let i = 0; i < input.length; i++) {
-        input.push($('.filter'));
+    for (let i = 0; i < input2$.length; i++) {
+        var these = ('tableInput' + [i]);
+        // console.log(these);
+        input.push(these);
+        // console.log(input);
     }
 
     const vlu = [];
