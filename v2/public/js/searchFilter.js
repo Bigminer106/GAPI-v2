@@ -143,11 +143,11 @@ function searchAll() {
         let filters = [];
         vlu.forEach((filter, j) =>
             filters.push(filter.toUpperCase()));
-        // console.log(filters)
+        // console.log(filters);
         const testhere = tr.getElementsByTagName("td");
         testhere$ = Array.from(tr.getElementsByTagName("td"));
 
-        console.log(testhere$);
+        // console.log(testhere$);
 
         if (testhere$) {
             if (testhere[0].innerHTML.toUpperCase().indexOf(filters[0]) > -1 &&
