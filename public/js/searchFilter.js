@@ -26,11 +26,12 @@ var searchAll = () => {
         const tablecell = tr.getElementsByTagName("td");
         tablecell$ = Array.from(tr.getElementsByTagName("td"));
         filters$ = Array.from(filters);
-        
+
         // console.log(tablecell$);
         // console.log(filters$);
         // console.log(filters);
 
+        // Filter Fix
         const exists = tablecell$.every((cell, i) => {
             return cell.innerHTML.toUpperCase().includes(filters[i]);
         });
