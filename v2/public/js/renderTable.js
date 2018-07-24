@@ -20,7 +20,7 @@ function renderTable(tableData) {
 
 // Assign classes to arrays:
     const dimension = ['date range', 'date interval', 'location: most recent', 'manager: most recent', 'position: most recent', 'supervisor: most recent', 'supervisor: historical', 'agent name', 'agent email'];
-    const formattedmetric = ['7 day call fcr', 'agent ease', 'replacement rate', 'aux %', 'aht', 'deltacast %', 'replacements and oneoffs per unique tickets updated by updater'];
+    const formattedmetric = ['7 day call fcr', 'agent ease', 'replacement rate', 'aux %', 'aht', 'deltacast %', 'replacements and oneoffs per unique tickets updated by updater', 'metric 1', 'metric 2', 'metric 3', 'metric 4', 'metric 5', 'metric 6'];
     let extrametrics = [];
     let classNames = [];
     let idNames = [];

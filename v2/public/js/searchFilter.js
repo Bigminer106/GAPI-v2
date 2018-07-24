@@ -126,23 +126,18 @@ function searchAll() {
     table = document.getElementById('tableBody');
     trs = Array.from(table.getElementsByTagName('tr'));
 
-    var input = [];
-    console.log(input);
-    input2 = $('.filter');
-    console.log(input2);
-    input2$ = $(input2);
-    console.log(input2$);
+    var inputArr = [];
+    filterInput = $('.filter');
+    filterInput$ = $(filterInput);
 
-    for (let i = 0; i < input2$.length; i++) {
-        var these = ('tableInput' + [i]);
-        // console.log(these);
-        input.push(these);
-        // console.log(input);
+    for (let i = 0; i < filterInput$.length; i++) {
+        var filterIDs = ('tableInput' + [i]);
+        inputArr.push(filterIDs);
     }
 
     const vlu = [];
-    for (d in input) {
-        vlu.push(document.getElementById(input[d]).value);
+    for (d in inputArr) {
+        vlu.push(document.getElementById(inputArr[d]).value);
     }
     trs.forEach(function (tr, i) {
         let filters = [];

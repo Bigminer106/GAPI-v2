@@ -42,10 +42,10 @@
     <script type="text/javascript" src="js/renderFilters.js"></script>
     <script src="src/table2csv.js"></script>
     <script type="text/javascript" src="js/renderTable.js"></script>
+    <script type="text/javascript" src="js/conditionalFormat.js"></script>
     <script type="text/javascript" src="js/tabletocsv.js"></script>
     <script type="text/javascript" src="js/sortTable.js"></script>
     <script type="text/javascript" src="js/searchFilter.js"></script>
-    <script type="text/javascript" src="js/conditionalFormat.js"></script>
 
     <navbar class="navbar" id="navbar">
         <button id="signin-button" onclick="handleSignInClick()">Sign In</button> 
@@ -114,7 +114,7 @@
             };
 
             rawTitle = thisSheet.sheet_title;
-            buttonTitle = rawTitle.replace(/[- ]/g, '')
+            buttonTitle = rawTitle.replace(/[-]/g, '')
                 .trim()
                 .replace(/ /g, '-');
             buttonSheetID = thisSheet.sheet_ID;
