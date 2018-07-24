@@ -6,8 +6,10 @@ var path = require("path");
 
 // Sets up the Express App
 // =============================================================
+
+var PORT = process.env.PORT || 8000;
 var app = express();
-var PORT = 8000;
+// var PORT = 8000;
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -16,32 +18,14 @@ app.use(bodyParser.json());
 // Static directory
 app.use(express.static("public"));
 
-
-// Star Wars Characters (DATA)
+// MONGODB Connection
 // =============================================================
-// var characters = [
-//   {
-//     routeName: "yoda",
-//     name: "Yoda",
-//     role: "Jedi Master",
-//     age: 900,
-//     forcePoints: 2000
-//   },
-//   {
-//     routeName: "darthmaul",
-//     name: "Darth Maul",
-//     role: "Sith Lord",
-//     age: 200,
-//     forcePoints: 1200
-//   },
-//   {
-//     routeName: "obiwankenobi",
-//     name: "Obi Wan Kenobi",
-//     role: "Jedi Master",
-//     age: 55,
-//     forcePoints: 1350
-//   }
-// ];
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/eligend"
+
+// Connect to the Mongo DB
+// mongoose.connect("mongodb://localhost/eligend");
+// mongoose.connect(MONGODB_URI);
+
 
 // Routes
 // =============================================================

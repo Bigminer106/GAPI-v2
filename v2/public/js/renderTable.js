@@ -60,6 +60,27 @@ function renderTable(tableData) {
         $(headers[i]).attr("fieldtype", fieldType);
 
 
+//////
+
+
+// if ($(headers[i]).attr('fieldtype') = 'formatted') {
+        console.log($(this).attr('fieldtype','formatted')); // logs all headers regardless of attr
+        console.log(this.attr());
+// }
+// formattedmetric.includes(celldata)) {
+//     fieldType = 'formatted';
+        
+
+// } else {
+//     $(this).addClass('extrametric')
+//     fieldType = 'extrametric'
+//     extrametrics.push(celldata);
+// };
+// $(headers[i]).attr("fieldtype", fieldType);
+
+//////
+
+
         // Assign metric title, data-type, and column headers and cells:
         cleaned = $(this).text()
             .replace(/[%:-]/g, '')
@@ -102,9 +123,9 @@ function renderTable(tableData) {
     });
     
 
-    conditionalFormatting();
     renderDownloadButton();
     renderFilters();
+    conditionalFormatting();
 };
 
 // ERROR CHECK FEATURE: logs file loaded to console
