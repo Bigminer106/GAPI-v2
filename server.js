@@ -36,6 +36,13 @@ app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
+// Starts the server to begin listening
+// =============================================================
+app.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
+});
+
+
 // app.get("/add", function(req, res) {
 //   res.sendFile(path.join(__dirname, "add.html"));
 // });
@@ -77,8 +84,3 @@ app.get("/", function(req, res) {
 //   res.json(newcharacter);
 // });
 
-// Starts the server to begin listening
-// =============================================================
-app.listen(PORT, function() {
-  console.log("App listening on PORT " + PORT);
-});

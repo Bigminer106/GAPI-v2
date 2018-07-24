@@ -6,8 +6,6 @@ public.bak/
 
 credentials.js
 OAuth.js
-Keys.js
-Sheets.js
 
 # node_modules
 credentialsv2.js
