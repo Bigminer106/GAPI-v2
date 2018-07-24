@@ -101,33 +101,6 @@ function renderTable(tableData) {
     let NI;
 
 
-    $('.aht').each(function () {
-        const cellText = this.innerHTML;
-        exceptional = 600;
-        effective = 720;
-        achieves = 840;
-        NI = 1050;
-        const noComma = cellText.replace(/\,/g, '');
-        cellNum = parseFloat(noComma);
-
-        if ($(this).hasClass('indextitle')) {
-            status = 'ignore';
-        } else if (cellNum <= exceptional) {
-            status = 'exceptional';
-        } else if (cellNum > exceptional && cellNum <= effective) {
-            status = 'effective';
-        } else if (cellNum > effective && cellNum <= achieves) {
-            status = 'achieves';
-        } else if (cellNum > achieves && cellNum <= NI) {
-            status = 'NI';
-        } else if (cellNum > NI) {
-            status = 'unacceptable';
-        };
-
-        $(!'.indextitle').addClass(status);
-        $(this).addClass(status);
-    });
-
     $('.metric-1').each(function () {
         const cellText = this.innerHTML;
         exceptional = 82.00;
@@ -211,35 +184,7 @@ function renderTable(tableData) {
         $(this).addClass(status);
     });
 
-    $('.metric-3').each(function () {
-        const cellText = this.innerHTML;
-        const cleanedText = cellText.replace(/[%]/g, '');
-        cellNum = parseFloat(cleanedText);
-        // const cleanNum = cellText.replace(/\D/g, '');
-        exceptional = (cellNum < 26);
-        unacceptable = (cellNum > 32);
-        NI = (cellNum > 30 && !unacceptable);
-        achieves = (cellNum > 28 && !NI);
-        effective = (cellNum >= 26 && !achieves);
-        // if ((unacceptable) || (NI) || || ||
-        // console.log(condition = true);
-        //  unacc.push(condition);
 
-        if ($(this).hasClass('indextitle')) {
-            status = 'ignore';
-        } else if (exceptional) {
-            status = 'exceptional';
-        } else if (effective) {
-            status = 'effective';
-        } else if (achieves) {
-            status = 'achieves';
-        } else if (NI) {
-            status = 'NI';
-        } else if (unacceptable) {
-            status = 'unacceptable';
-        };
-
-    });
 
     // Call sortTable function to sort column on header click:
     const cells = $('thead').find('td');
