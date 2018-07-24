@@ -27,7 +27,7 @@
 //     // // Create an array which records each table row.
 //     trs = Array.from($('tr td'));
 //     // console.log(trs);
-//     vlu.push(document.getElementById(vlllu[d]).value);
+//     vlu.push(document.getElementById(input[d]).value);
 //     // // For each table row, let tr = row.
 //     trs.forEach(function (tr, i) {
 
@@ -64,7 +64,7 @@
 //         table = document.getElementById('tableBody');
 //         trs = Array.from(table.getElementsByTagName('tr'));
 
-//         const vlllu = 
+//         const input = 
 //         ['tableInput1',
 //         'tableInput2',
 //         'tableInput3',
@@ -82,8 +82,8 @@
 //         'tableInput15'];
 
 //         const vlu = [];
-//         for (d in vlllu) {
-//             vlu.push($('vlllu'[d]).val);
+//         for (d in input) {
+//             vlu.push($('input'[d]).val);
 //         }
 //         console.log(vlu);
 
@@ -125,32 +125,20 @@ function searchAll() {
     let table, trs, tds;
     table = document.getElementById('tableBody');
     trs = Array.from(table.getElementsByTagName('tr'));
-    const vlllu = [
-        'tableInput0',
-        'tableInput1',
-        'tableInput2',
-        'tableInput3',
-        'tableInput4',
-        'tableInput5',
-        'tableInput6',
-        'tableInput7',
-        'tableInput8',
-        'tableInput9',
-        'tableInput10',
-        'tableInput11',
-        'tableInput12',
-        'tableInput13',
-        'tableInput14'
-    ]
-    console.log(vlllu);
-    vlllu2 = $('.filter');
-    console.log(vlllu2);
-    vlllu2$ = vlllu2;
-    console.log(vlllu2$);
+    const input = []
+    console.log(input);
+    input2 = $('.filter');
+    console.log(input2);
+    input2$ = input2;
+    console.log(input2$);
+
+    for (let i = 0; i < input.length; i++) {
+        input.push($('.filter'));
+    }
 
     const vlu = [];
-    for (d in vlllu) {
-        vlu.push(document.getElementById(vlllu[d]).value);
+    for (d in input) {
+        vlu.push(document.getElementById(input[d]).value);
     }
     trs.forEach(function (tr, i) {
         let filters = [];
