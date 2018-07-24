@@ -218,3 +218,16 @@ input {
 .agent-email {
   text-overflow: clip;
 }
+
+#downloadButton {
+  margin-top: 6px;
+  /* position */
+  border-radius: 100px;
+  background-color: aliceblue;
+  padding: auto;
+}
+
+h2#reportTitle {
+  width: 400px;
+  margin: 10px;
+}

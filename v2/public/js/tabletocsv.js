@@ -1,11 +1,12 @@
 var renderDownloadButton = table => {
-    const downloadDiv = $('<div>')
-    .attr('id', 'downloads')
-    .appendTo('.navbar');
+const downloadDiv = $('<div>')
+                .attr('id', 'downloads')
+                .appendTo('h2')
+                .css('style', 'none');
     
-    clearDownloadButton();
+clearDownloadButton();
 
-    const downloadButton = $('<button>')
+const downloadButton = $('<button>')
         .addClass('download-button')
         .appendTo('#downloads')
         .attr('id', 'downloadButton')
