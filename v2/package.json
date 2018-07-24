@@ -1,7 +1,7 @@
 {
   "name": "Reporting Platform",
   "version": "2.7.9",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -16,10 +16,12 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.0",
-    "bootstrap": "^4.1.3",
-    "express": "^4.13.4",
+    "bootstrap": "^3.3.7",
+    "express": "^4.16.3",
+    "heroku": "^7.7.4",
     "jquery": "^3.3.1",
-    "node.js": "0.0.0",
+    "node": "^10.7.0",
+    "nodemon": "^1.18.3",
     "npm": "^6.2.0",
     "popper.js": "^1.14.3",
     "table2csv": "^1.0.0",
