@@ -7,7 +7,7 @@ var path = require("path");
 // Sets up the Express App
 // =============================================================
 
-var PORT = process.env.PORT || 8000;
+var port = process.env.PORT || 8000;
 var app = express();
 
 // var PORT = 8000;
@@ -38,8 +38,8 @@ app.get("/", function(req, res) {
 
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function() {
-  console.log("App listening on PORT " + PORT);
+app.listen(port, function() {
+  console.log("App listening on PORT " + port);
 });
 
 
