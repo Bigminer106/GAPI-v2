@@ -65,7 +65,7 @@ function renderTable(tableData) {
 
 // if ($(headers[i]).attr('fieldtype') = 'formatted') {
         console.log($(this).attr('fieldtype','formatted')); // logs all headers regardless of attr
-        console.log(this.attr());
+        // console.log(this.attr());
 // }
 // formattedmetric.includes(celldata)) {
 //     fieldType = 'formatted';
