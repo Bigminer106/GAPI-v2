@@ -145,21 +145,11 @@ function searchAll() {
             filters.push(filter.toUpperCase()));
         // console.log(filters)
         const testhere = tr.getElementsByTagName("td");
-        if (testhere[0] && 
-            testhere[1] && 
-            testhere[2] && 
-            testhere[3] && 
-            testhere[4] && 
-            testhere[5] && 
-            testhere[6] && 
-            testhere[7] &&
-            testhere[8] && 
-            testhere[9] && 
-            testhere[10] && 
-            testhere[11] && 
-            testhere[12] && 
-            testhere[13] &&  
-            testhere[14]) {
+        testhere$ = Array.from(tr.getElementsByTagName("td"));
+
+        console.log(testhere$);
+
+        if (testhere$) {
             if (testhere[0].innerHTML.toUpperCase().indexOf(filters[0]) > -1 &&
                 testhere[1].innerHTML.toUpperCase().indexOf(filters[1]) > -1 &&
                 testhere[2].innerHTML.toUpperCase().indexOf(filters[2]) > -1 &&
@@ -174,7 +164,8 @@ function searchAll() {
                 testhere[11].innerHTML.toUpperCase().indexOf(filters[11]) > -1 &&
                 testhere[12].innerHTML.toUpperCase().indexOf(filters[12]) > -1 &&
                 testhere[13].innerHTML.toUpperCase().indexOf(filters[13]) > -1 &&
-                testhere[14].innerHTML.toUpperCase().indexOf(filters[14]) > -1) {
+                testhere[14].innerHTML.toUpperCase().indexOf(filters[14]) > -1) 
+                {
                 tr.style.display = "";
             } else {
                 tr.style.display = "none"

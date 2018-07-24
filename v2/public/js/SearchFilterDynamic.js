@@ -35,6 +35,9 @@
 //         vlu.forEach((filter, j) =>
 //             filters.push(filter.toUpperCase()));
 
+
+
+
 //         // const testhere$ = new Array($('tr td')); // prints classes!
 //         const testhere$ = Array.from(document.getElementsByTagName('tr td'));
 //         testhere$.forEach(function(i) {
