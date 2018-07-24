@@ -90,102 +90,7 @@ function renderTable(tableData) {
     // console.log("These metrics do not have conditional formatting rules: " + extrametrics);
     // console.log(extrametrics);
 
-    console.log('metric-1'.condition);
-    console.log(settings);
-    console.log(conditions);
-    let status;
-    let cellNum;
-    let exceptional
-    let effective;
-    let achieves;
-    let NI;
-
-
-    $('.metric-1').each(function () {
-        const cellText = this.innerHTML;
-        exceptional = 82.00;
-        effective = 80.00;
-        achieves = 78.00;
-        NI = 76.00;
-        const noComma = cellText.replace(/\,/g, '');
-        cellNum = parseFloat(noComma);
-
-        if ($(this).hasClass('indextitle')) {
-            status = 'ignore';
-        } else if (cellNum <= exceptional) {
-            status = 'exceptional';
-        } else if (cellNum > exceptional && cellNum <= effective) {
-            status = 'effective';
-        } else if (cellNum > effective && cellNum <= achieves) {
-            status = 'achieves';
-        } else if (cellNum > achieves && cellNum <= NI) {
-            status = 'NI';
-        } else if (cellNum > NI) {
-            status = 'unacceptable';
-        };
-
-        $(!'.indextitle').addClass(status);
-        $(this).addClass(status);
-    });
-
-    $('.metric-2').each(function () {
-        const cellText = this.innerHTML;
-        exceptional = 9.9;
-        effective = 9.7;
-        achieves = 9.5;
-        NI = 9.2;
-        cellNum = parseFloat(cellText);
-
-        if ($(this).hasClass('indextitle')) {
-            status = 'ignore';
-        } else if (cellNum >= exceptional) {
-            status = 'exceptional';
-        } else if (cellNum < exceptional && cellNum >= effective) {
-            status = 'effective';
-        } else if (cellNum < effective && cellNum >= achieves) {
-            status = 'achieves';
-        } else if (cellNum < achieves && cellNum >= NI) {
-            status = 'NI';
-        } else if (cellNum < NI) {
-            status = 'unacceptable';
-        };
-
-        $(!'.indextitle').addClass(status);
-        $(this).addClass(status);
-    });
-
-    $('.metric-3').each(function () {
-        const cellText = this.innerHTML;
-        exceptional = .06;
-        effective = .07;
-        achieves = .08;
-        NI = .09;
-        cellNum = parseFloat(cellText);
-
-        if ($(this).hasClass('indextitle')) {
-            status = 'ignore';
-        } else if (cellNum >= exceptional) {
-            status = 'exceptional';
-        }
-        if (cellNum < exceptional && cellNum >= effective) {
-            status = 'effective';
-        }
-        if (cellNum < effective && cellNum >= achieves) {
-            status = 'achieves';
-        }
-        if (cellNum < achieves && cellNum >= NI) {
-            status = 'NI';
-        }
-        if (cellNum < NI) {
-            status = 'unacceptable';
-        };
-
-        $(!'.indextitle').addClass(status);
-        $(this).addClass(status);
-    });
-
-
-
+    
     // Call sortTable function to sort column on header click:
     const cells = $('thead').find('td');
     cells.each(function (i) {
@@ -195,7 +100,9 @@ function renderTable(tableData) {
             };
         })(i);
     });
+    
 
+    conditionalFormatting();
     renderDownloadButton();
     renderFilters();
 };
