@@ -33,6 +33,7 @@ function searchAll() {
 
         if (tablecell$) {
             for (index in tablecell$) {
+                // console.log(index)
             if (tablecell[0].innerHTML.toUpperCase().indexOf(filters[0]) > -1 &&
                 tablecell[1].innerHTML.toUpperCase().indexOf(filters[1]) > -1 &&
                 tablecell[2].innerHTML.toUpperCase().indexOf(filters[2]) > -1 &&
