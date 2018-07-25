@@ -93,20 +93,43 @@ var conditionalFormatting = () => {
 
         $(!'.indextitle').addClass(status);
         $(this).addClass(status);
-        
-        
-        
+
+
     });
+
+    // // Conditional formatting class setting:
     var formattedMetric = $('.indextitle.formatted');
     console.log(formattedMetric);
+    // const KPI = [];
+    // var KPIs = [];
 
 };
 
-// // Conditional formatting class setting:
-// var formattedMetric$ = $(formattedMetric);
-    // console.log(formattedMetric$);
-// const KPI = [];
-// var KPIs = [];
+function conditionAssignment() {
+    for (i = 0; i < setup.length; i++) {
+        let KPIs = setup[i];
+        // console.log(KPIs);
+        KPIMetric = KPIs.metric;
+        KPICondition = KPIs.condition;
+        KPIOperator = KPIs.operator;
+        KPITarget = KPIs.target;
+        KPIValueParams = KPIs.valueParams;
+        KPITitle = KPIs.className;
+        // console.log(KPIs);
+        console.log(KPIMetric);
+        console.log(KPICondition);
+        console.log(KPIOperator);
+        console.log(KPITarget);
+        console.log(KPIValueParams);
+        console.log(KPITitle);
+
+        // console.log(hyph.includes(KPITitle));
+        // console.log(formattedMetric.hyph);
+    }
+}; // LOOPING PROPERLY
+
+conditionAssignment();
+
 // settings;
 // // console.log(settings);
 // let setting$ = $(settings);
@@ -139,30 +162,7 @@ var conditionalFormatting = () => {
 // formatAssignment ();
 
 
-function conditionAssignment() {
-    for (i = 0; i < setup.length; i++) {
-        let KPIs = setup[i];
-        // console.log(KPIs);
-        KPIMetric = KPIs.metric;
-        KPICondition = KPIs.condition;
-        KPIOperator = KPIs.operator;
-        KPITarget = KPIs.target;
-        KPIValueParams = KPIs.valueParams;
-        KPITitle = KPIs.className;
-        // console.log(KPIs);
-        console.log(KPIMetric);
-        console.log(KPICondition);
-        console.log(KPIOperator);
-        console.log(KPITarget);
-        console.log(KPIValueParams);
-        console.log(KPITitle);
 
-        // console.log(hyph.includes(KPITitle));
-        // console.log(formattedMetric.hyph);
-    }
-}; // LOOPING PROPERLY
-
-conditionAssignment();
 
 // // Sets condition logic:
 // const cellText = this.innerHTML;
@@ -198,9 +198,3 @@ conditionAssignment();
 // });
 // };
 // testingCondition();
-
-
-
-
-
-
