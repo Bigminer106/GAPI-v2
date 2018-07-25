@@ -1,5 +1,4 @@
-
-function conditionalFormatting() {
+var conditionalFormatting = () => {
 
     console.log('metric-1'.condition);
     console.log(settings);
