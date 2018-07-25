@@ -93,15 +93,18 @@ var conditionalFormatting = () => {
 
         $(!'.indextitle').addClass(status);
         $(this).addClass(status);
+        
+        
+        
     });
+    var formattedMetric = $('.indextitle.formatted');
+    console.log(formattedMetric);
 
 };
 
 // // Conditional formatting class setting:
-var formattedMetric = $('.formatted');
-var formattedMetric$ = $(formattedMetric);
-    console.log(formattedMetric);
-    console.log(formattedMetric$);
+// var formattedMetric$ = $(formattedMetric);
+    // console.log(formattedMetric$);
 // const KPI = [];
 // var KPIs = [];
 // settings;
