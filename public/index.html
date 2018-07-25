@@ -15,11 +15,11 @@
 
     <!-- ERROR CHECK SCRIPTS -->
     <script type="text/javascript" src="../../error-checks/js-file-load.js"></script>
-    
+
     <!-- CREDENTIALS FILES (set up credentials/*.template.* files) -->
     <script type="text/javascript" src="../../credentials/Keys.js"></script>
     <script type="text/javascript" src="../../credentials/Sheets.js"></script>
-    
+
     <!-- STYLING -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,400,600,700">
     <link href="css/scorecard-style.css" rel="stylesheet">
@@ -36,10 +36,10 @@
 <body>
 
     <!-- JAVASCRIPT APP-SPECIFIC SCRIPTS -->
-    <script type="text/javascript" src="js/conditionalSettings.js"></script>
     <script type="text/javascript" src="js/initClient.js"></script>
     <script type="text/javascript" src="js/makeGAPIcall.js"></script>
     <script type="text/javascript" src="js/renderFilters.js"></script>
+    <script type="text/javascript" src="js/conditionalSettings.js"></script>
     <script type="text/javascript" src="js/conditionalFormat.js"></script>
     <script src="src/table2csv.js"></script>
     <script type="text/javascript" src="js/renderTable.js"></script>
@@ -48,19 +48,17 @@
     <script type="text/javascript" src="js/searchFilter.js"></script>
 
     <navbar class="navbar" id="navbar">
-        <button id="signin-button" onclick="handleSignInClick()">Sign In</button> 
-    <!-- CONVERT ME ^^ to dropdown Called "Connect Source" -->
-    <!-- will list other API methods eventually... -->
-        <!-- <div id="downloads"></div> -->
+        <button id="signin-button" onclick="handleSignInClick()">Sign In</button>
+        <!-- CONVERT ME ^^ to dropdown Called "Connect Source" -->
+        <!-- will list other API methods eventually... -->
     </navbar>
 
-    <!-- <div class="jumbotron"> -->
-        <h2 id="reportTitle"></h2>
-        <div id='input-filters' class='hide'>
+    <h2 id="reportTitle"></h2>
+    <div id='input-filters' class='hide'>
         <div id="temp-all-filters">
             Filters
             <br>
-            </div>
+        </div>
         <!-- <div id="dimension-filters">
             Dimensions
             <br>
@@ -75,12 +73,11 @@
             <br>
         </div> -->
     </div>
-<!-- </div> -->
+    <!-- </div> -->
 
     <div class="table-responsive-lg">
         <table class="table" id="theTable">
             <div id="instructions"></div>
-            <!--BOOTSTRAP CLASS-->
             <thead id="tableHead">
                 <tr id="headerRow" class="header"></tr>
             </thead>
@@ -130,7 +127,7 @@
                     id: buttonSheetID,
                     range: buttonSheetRange,
                     title: buttonTitle
-            });
+                });
         };
 
         // Set button routes:
