@@ -106,6 +106,20 @@ td {
   border-top: 1px solid white;
 }
 
+.search-key,
+input {
+  border-radius: 100px;
+  box-shadow: 0;
+  border-width: 0px;
+  background-color: aliceblue;
+  font-style: initial;
+  /* color: lightgray; */
+  padding: 2px 5px 2px 5px;
+  margin: 4px;
+  font-size: 14px;
+  font-weight: 100;
+}
+
 /* CONDITIONAL FORMATTING */
 
 .exceptional {
@@ -182,19 +196,7 @@ h1 {
     display: block;
   } */
 
-.search-key,
-input {
-  border-radius: 100px;
-  box-shadow: 0;
-  border-width: 0px;
-  background-color: aliceblue;
-  font-style: initial;
-  /* color: lightgray; */
-  padding: 2px 5px 2px 5px;
-  margin: 4px;
-  font-size: 14px;
-  font-weight: 100;
-}
+
 
 ::placeholder {
   overflow: hidden;
