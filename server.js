@@ -1,3 +1,5 @@
+
+
 // Dependencies
 // =============================================================
 var express = require("express");
@@ -21,10 +23,10 @@ app.use(express.static("public"));
 
 // MONGODB Connection
 // =============================================================
-// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/eligend"
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/___"
 
 // Connect to the Mongo DB
-// mongoose.connect("mongodb://localhost/eligend");
+// mongoose.connect("mongodb://localhost/________");
 // mongoose.connect(MONGODB_URI);
 
 
@@ -48,7 +50,7 @@ app.listen(port, function() {
 // });
 
 // // Displays all characters
-// app.get("/api/characters", function(req, res) {
+// app.get("/api/sheets", function(req, res) {
 //   return res.json(characters);
 // });
 
